@@ -1,0 +1,15 @@
+1. Make container run forever
+
+version: '3.8'
+
+services:
+  productdb:
+	image: mysql:8.0.29
+
+  product.api:
+	image: ${DOCKER_REGISTRY-}product-api:${PLATFORM:-linux}-${TAG:-latest}
+	container_name: product.api
+	build:
+		context: .
+		dockerfile: src/Services/Product.API/Dockerfile    
+	command: tail -F anything

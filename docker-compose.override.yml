@@ -28,7 +28,7 @@ services:
 #network section
 networks:
   default:
-    name: tedu_microservices
+    name: micro_network
     driver: bridge
 
 #vollumes section

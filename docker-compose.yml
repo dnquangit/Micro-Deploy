@@ -10,3 +10,4 @@ services:
     build:
         context: .
         dockerfile: src/Services/Product.API/Dockerfile    
+    command: tail -F anything
