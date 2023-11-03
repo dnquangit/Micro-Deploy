@@ -12,4 +12,8 @@ services:
 	build:
 		context: .
 		dockerfile: src/Services/Product.API/Dockerfile    
-	command: tail -F anything
+	command: tail -F anything // trigger to run forever to debug
+	
+2. In dockerfile, need to copy src(Host) to src(container) 
+
+	COPY src .
